@@ -1,13 +1,11 @@
 import {
-  Backend_skill,
-  Frontend_skill,
-  Full_stack,
-  Other_skill,
-  Skill_data,
+  automation_stack,
+  dev_tools,
+  fullstack_stack,
 } from "@/constants";
 import React from "react";
 import SkillDataProvider from "../sub/SkillDataProvider";
-import SkillText from "../sub/SkillText";
+import {SkillIntro, AutomationStackText, FullstackStackText, DevToolsText} from "../sub/SkillText";
 
 const Skills = () => {
   return (
@@ -16,61 +14,45 @@ const Skills = () => {
       className="flex flex-col items-center justify-center gap-3 h-full relative overflow-hidden pb-80 py-20"
       style={{ transform: "scale(0.9" }}
     >
-      <SkillText />
+      <SkillIntro />
 
+      <AutomationStackText />
       <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
-        {Skill_data.map((image, index) => (
+        {automation_stack.map((image, index) => (
           <SkillDataProvider
-            key={index}
-            src={image.Image}
-            width={image.width}
-            height={image.height}
-            index={index}
+          key={index}
+          src={image.Image}
+          width={image.width}
+          height={image.height}
+          index={index}
+          title={image.skill_name}
           />
         ))}
       </div>
 
+      <FullstackStackText />
       <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
-        {Frontend_skill.map((image, index) => (
+        {fullstack_stack.map((image, index) => (
           <SkillDataProvider
-            key={index}
-            src={image.Image}
-            width={image.width}
-            height={image.height}
-            index={index}
+          key={index}
+          src={image.Image}
+          width={image.width}
+          height={image.height}
+          index={index}
+          title={image.skill_name}
           />
         ))}
       </div>
+      <DevToolsText />
       <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
-        {Backend_skill.map((image, index) => (
+        {dev_tools.map((image, index) => (
           <SkillDataProvider
-            key={index}
-            src={image.Image}
-            width={image.width}
-            height={image.height}
-            index={index}
-          />
-        ))}
-      </div>
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
-        {Full_stack.map((image, index) => (
-          <SkillDataProvider
-            key={index}
-            src={image.Image}
-            width={image.width}
-            height={image.height}
-            index={index}
-          />
-        ))}
-      </div>
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
-        {Other_skill.map((image, index) => (
-          <SkillDataProvider
-            key={index}
-            src={image.Image}
-            width={image.width}
-            height={image.height}
-            index={index}
+          key={index}
+          src={image.Image}
+          width={image.width}
+          height={image.height}
+          index={index}
+          title={image.skill_name}
           />
         ))}
       </div>
