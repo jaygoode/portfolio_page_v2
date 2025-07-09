@@ -57,16 +57,16 @@ const Skills = () => {
         ))}
       </div>
 
-      <div className="w-full h-full absolute">
-        <div className="w-full h-full z-[-10] opacity-30 absolute flex items-center justify-center bg-cover">
+      <div className="absolute inset-0 w-full h-full z-[-10]">
+        <div className="absolute inset-0 w-full h-full flex items-center justify-center bg-cover opacity-30">
           <video
-            className="w-full h-auto"
+            className="absolute inset-0 w-full h-full object-cover"
             preload="false"
             playsInline
             loop
             muted
             autoPlay
-            src="/cards-video.webm"
+            src="/encryption.webm"
           />
         </div>
       </div>
